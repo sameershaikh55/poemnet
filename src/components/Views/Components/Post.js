@@ -33,8 +33,8 @@ function Post({ id, userName, postImageUrl, caption, comments, user }) {
 							border: "3px solid rgba(244,110,58,1)",
 							display: "flex",
 							flexDirection: "row",
-              alignItems: "center",
-              borderRadius: "50%",
+							alignItems: "center",
+							borderRadius: "50%",
 						}}
 					>
 						<Avatar
@@ -51,7 +51,8 @@ function Post({ id, userName, postImageUrl, caption, comments, user }) {
 					{user ? (
 						user.displayName?.toLowerCase() === userName?.toLowerCase() ? (
 							<button
-								className="button"
+								style={{ background: "rgba(244,110,58,0.1)" }}
+								className="button text-white"
 								aria-controls="simple-menu"
 								aria-haspopup="true"
 								onClick={deletePost}
@@ -75,16 +76,16 @@ function Post({ id, userName, postImageUrl, caption, comments, user }) {
 					<p className="mb-0">
 						<strong>{userName}</strong> {caption}
 					</p>
-        </div>
-        <div className="mb-4">
-				{comments ? (
-					comments.map((comment) => (
-						<Comment username={comment.username} comment={comment.comment} />
-					))
-				) : (
-					<></>
-				)}
-        </div>
+				</div>
+				<div className="mb-4">
+					{comments ? (
+						comments.map((comment) => (
+							<Comment username={comment.username} comment={comment.comment} />
+						))
+					) : (
+						<></>
+					)}
+				</div>
 				<CommentInput comments={comments} id={id} user={user} />
 			</div>
 		</div>
