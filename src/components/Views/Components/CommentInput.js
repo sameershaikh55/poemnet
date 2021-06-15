@@ -31,27 +31,27 @@ function CommentInput({ comments, id, user }) {
   };
 
   return (
-    <div className="commentInput">
-      <textarea
-        rows="1"
-        value={comment}
-        onChange={(e) => setComment(e.target.value)}
-        className="commentInput__textarea"
-        placeholder="Add a comment.."
-      ></textarea>
+		<div className="commentInput">
+			<input
+				rows="1"
+				value={comment}
+				onChange={(e) => setComment(e.target.value)}
+				className="commentInput__textarea"
+				placeholder="Add a comment.."
+			></input>
 
-      <button
-        onClick={addComment}
-        className="button commentInput__button"
-        style={{
-          color: comment ? "gray" : "lightgrey",
-          fontWeight: comment ? "600" : "500",
-        }}
-      >
-        Post
-      </button>
-    </div>
-  );
+			<button
+				onClick={addComment}
+				className="button commentInput__button"
+				style={{
+					color: comment ? "rgba(253,78,51,1)" : "lightgrey",
+					fontWeight: comment ? "600" : "500",
+				}}
+			>
+				Post
+			</button>
+		</div>
+	);
 }
 
 export default CommentInput;

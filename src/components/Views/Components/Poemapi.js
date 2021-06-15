@@ -16,7 +16,7 @@ function Poem() {
       });
   }; 
   return (
-		<div className="potd">
+		<div className="potd my-5">
 			<div className="d-flex justify-content-between align-content-center">
 				<span className="potd-span">Poems of the day</span>
 				<Button

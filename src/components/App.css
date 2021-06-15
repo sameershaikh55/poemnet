@@ -5,6 +5,31 @@
   font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar {
+	width: 8px;
+	height: 3px;
+}
+::-webkit-scrollbar-button {
+	background-color: #000;
+}
+::-webkit-scrollbar-track {
+  background: linear-gradient(49deg, rgba(253,78,51,1) 0%, rgba(244,110,58,1) 100%);
+}
+::-webkit-scrollbar-track-piece {
+	background-color: #ccc;
+}
+::-webkit-scrollbar-thumb {
+	height: 50px;
+  background: linear-gradient(49deg, rgba(253,78,51,1) 0%, rgba(244,110,58,1) 100%);
+	border-radius: 3px;
+}
+::-webkit-scrollbar-corner {
+	background-color: gray;
+}
+::-webkit-resizer {
+	background-color: #666;
+}
+
 .app {
   background-color: #fff;
 }
@@ -36,3 +61,22 @@
   z-index: 10;
 }
 /* GLOBAL CLASS END */
+
+.logBtn.btn-primary {
+  background: linear-gradient(49deg, rgba(253,78,51,1) 0%, rgba(244,110,58,1) 100%);
+  border: none;
+}
+
+.linkT {
+  color: rgba(244,110,58,1);
+}
+.linkT:hover {
+  color: rgba(253,78,51,1);
+}
+
+.form-control:focus {
+border-color: rgba(244,110,58,1) !important;
+outline: 0 ;
+box-shadow: 0 0 0 .2rem rgba(253, 78, 51, 0.158) !important;
+}
+

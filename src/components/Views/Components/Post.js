@@ -21,64 +21,74 @@ function Post({ id, userName, postImageUrl, caption, comments, user }) {
   };
 
   return (
-    <div  className="post w-100"  >
-      <div className="post__header">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-          }}
-        >
-          <Avatar
-            alt={userName.toLowerCase()}
-            style={{ height: "25px", width: "25px" }}
-          >
-            {userName.charAt(0)}
-          </Avatar>
-          <div className="post__headerInfo">
-            <p style={{ fontSize: "14px" }}>{userName}</p>
-          </div>
+		<div className="post w-100">
+			<div className="innerPost">
+				<div className="post__header mb-4">
+					<div
+						style={{
+							height: "38px",
+							width: "38px",
+							fontWeight: "bold",
+							cursor: "pointer",
+							border: "3px solid rgba(244,110,58,1)",
+							display: "flex",
+							flexDirection: "row",
+              alignItems: "center",
+              borderRadius: "50%",
+						}}
+					>
+						<Avatar
+							alt={userName.toLowerCase()}
+							style={{ height: "35px", width: "35px" }}
+						>
+							{userName.charAt(0)}
+						</Avatar>
+						<div className="post__headerInfo ml-3">
+							<p className="mb-0">{userName}</p>
+						</div>
+					</div>
+
+					{user ? (
+						user.displayName?.toLowerCase() === userName?.toLowerCase() ? (
+							<button
+								className="button"
+								aria-controls="simple-menu"
+								aria-haspopup="true"
+								onClick={deletePost}
+							>
+								Delete
+							</button>
+						) : (
+							<></>
+						)
+					) : (
+						<></>
+					)}
+				</div>
+				{/* headr --> avatar + username + time */}
+
+				{/* image */}
+				{/* <img className="post__image" src={postImageUrl} /> */}
+
+				{/* username + caption */}
+				<div className="post__bottom">
+					<p className="mb-0">
+						<strong>{userName}</strong> {caption}
+					</p>
         </div>
-
-        {user ? (
-          user.displayName?.toLowerCase() === userName?.toLowerCase() ? (
-            <button
-              className="button"
-              aria-controls="simple-menu"
-              aria-haspopup="true"
-              onClick={deletePost}
-            >
-              Delete
-            </button>
-          ) : (
-            <></>
-          )
-        ) : (
-          <></>
-        )}
-      </div>
-      {/* headr --> avatar + username + time */}
-
-      {/* image */}
-      <img className="post__image" src={postImageUrl} />
-
-      {/* username + caption */}
-      <div className="post__bottom">
-        <p>
-          <strong>{userName}</strong> {caption}
-        </p>
-      </div>
-      {comments ? (
-        comments.map((comment) => (
-          <Comment username={comment.username} comment={comment.comment} />
-        ))
-      ) : (
-        <></>
-      )}
-      <CommentInput comments={comments} id={id} user={user} />
-    </div>
-  );
+        <div className="mb-4">
+				{comments ? (
+					comments.map((comment) => (
+						<Comment username={comment.username} comment={comment.comment} />
+					))
+				) : (
+					<></>
+				)}
+        </div>
+				<CommentInput comments={comments} id={id} user={user} />
+			</div>
+		</div>
+	);
 }
 
 export default Post;

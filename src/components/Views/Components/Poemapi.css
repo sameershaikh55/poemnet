@@ -1,16 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .poem-btn {
-    color: #F8DDFF;
-    background-color: #4DB2E5;
-    border: 1px solid #1D9AF2;
-    border-radius: 20px;
-    padding: 0px 12px;
-    cursor: pointer;
-    height: 32px;
-    font-size: 16px;
     transition: all 0.2s ease-in-out;
  }
  .poem-btn:hover {
@@ -19,14 +11,19 @@
  }
 
  .potd {
-    /* padding-left: 20px; */
     font-family: "Lobster";
     font-size: 26px;
-    color: #B074DA;
+    color: #000;
 
  }
 
  .potd-span {
      display: block;
+    font-family: 'Pacifico', cursive;
  }
  
+
+ .MuiButton-containedSecondary {
+  background: linear-gradient(49deg, rgba(253,78,51,1) 0%, rgba(244,110,58,1) 100%);
+
+ }

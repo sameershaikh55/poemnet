@@ -1,7 +1,9 @@
 .commentInput {
   display: flex;
   justify-content: space-between;
-  padding: 16px 12px;
+  padding: 12px 12px;
+  box-shadow: 1px 1px 10px rgb(230, 230, 230);
+  border-radius: 12px;
 }
 
 .commentInput__text {
@@ -13,11 +15,17 @@
 
 .commentInput__textarea {
   border-radius: 20px;
-  background-color: #BAE8FF;
+background-color: rgb(245, 245, 245);
   border: none;
   width: 100%;
-  font-size: 14px;
+  font-size: 15px;
+  padding: 0.5rem 0rem 0.5rem 1rem;
   resize: none;
+  transition: 0.4s ;
+}
+
+.commentInput__textarea:focus {
+  border: 2px solid rgb(255, 202, 202);
 }
 
 .commentInput__textarea {
