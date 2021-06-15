@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+.poem-btn {
+    color: #F8DDFF;
+    background-color: #4DB2E5;
+    border: 1px solid #1D9AF2;
+    border-radius: 20px;
+    padding: 0px 12px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+ }
+ .poem-btn:hover {
+   box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+   transform: translateX(-3px);
+ }
+
+ .potd {
+    /* padding-left: 20px; */
+    font-family: "Lobster";
+    font-size: 26px;
+    color: #B074DA;
+
+ }
+
+ .potd-span {
+     display: block;
+ }
+ 

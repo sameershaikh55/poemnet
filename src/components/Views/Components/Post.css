@@ -1,0 +1,30 @@
+.post {
+  max-width: 600px;
+  background-color: #B0E2FB;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px 4px #ADE3FE;
+  
+}
+
+.post__image {
+  width: 100%;
+  object-fit: contain;
+  border-top: 0.5px solid #eff2f2;
+  border-bottom: 0.5px solid #F8DDFF;
+}
+
+.post__header {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+}
+
+.post__headerInfo {
+  margin-left: 10px;
+}
+
+.post__bottom {
+ 
+  padding: 6px 12px;
+}
